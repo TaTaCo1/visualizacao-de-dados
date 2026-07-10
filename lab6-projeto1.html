@@ -1,0 +1,184 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=line-race&code=pVbhbts2EP7fpyCCFXJWQ5HkyLGdtECWdkOBAQ3WrQXmGSgtMRIBiRRIKrVbGNg77AmG_dg77G_eZE_SIyVbEiW3BUoYoMU73n28-3i8u5JFinKGRMlGp-jjo0cIRsSZVAgzLtFTtDRLepwEnj89GZv5op5n9Tw_Gbf1Aq9aD_x6Dup5Yumd1-vhiVleXbYRKK5wdpOW97iDI5iHYxT4vgvTxfTcnY3R-fzCnTeWw7nvTsZoMptpnflk5k5BZxrCdNCZXMzcYIzCAHQ6vs_O0HOssCQKxRy9uEmxULKFSvJSRKSDaOlcM-6MkfOGZ2VOUExQBXuU56fOqmP-jgs0ysA4BRPeJUxXJtRuRliiUlh48kRnYm-7cucWpUxHjUc99K4lXTVH0qOJGYgOktXppfm_a4eXFyb1T_dpN9upysii5d4sko1atA8XmcPhqMzLDMcYFXAmQINGmiH___mXTujpH-xH_IEwEN9gwfDDf2uMQIZ-xQUR_OFv83H7g9PFn5E77SsiTBFhyRQvFujcsxYB3Gu17aOugs3Ua_oBZP6su20vfUtokmqPa57FTkdld_jajVsR4jxTFIBYMRI0SYgAQ3hDpQVcL91yqo80hFJtC0DoyBTH_L2FoWsIyJNjZcwcru6owALnss2Z_ajyXECKK52lByy0lQRRpWDoXU-gx5VUgrPkGfB7cXVWf6DvPhauPtMbnJVkd7UWZ88-u7tmzp4wtql7bWbpr3Yoz3t23nURH0_Kmm_s4EJOdG4DizJ3BMORBwkTw83_nfN8SKbH9hqO_ZLFBHw5jDPSTddAyqoQS8WNwwGhxPfkWr7McWIUvuK0GiSUJxtjVSkW9Ty4MxE0trfVN873HlusraPnTG2BuYdOENjra66UDp3jzx43cWn73-jw9a5ORf8IK5JwsbWMMpxrqSmwPcHPHHbBJQCFnMZxRgZ0fsKAduIN4jHpPILHsHIYzK0gES2owg__PvzDW4XQ1PtvgDm1mJpT2DMMvWFq91U4Xl4yGvdKquGNghcO3PQlUL2hcnoNgAF-H_VHmQSHx0oqPFuH_5hRqGomPkqUpLF_EDwvRa0QhF4LaE_htwLiosu9N6j2AkvKEk22ck2jV6VqhaOxRTK8bRdYGm_s6loXTZCg75Efek2RaudIEkEJ8OtLGappZT2wA6mqQ7vGQ3mE1bc0VikohKF9N_WgiuRHn8rqAgugyC84pqVGDU0T_Dz4NZ3EZ6ocyYsU4tu7T83jFWmzThWVryqcGV6T7Jg9mfL3kCacyabY9Ylm0a5qg-peLN-a7s6FYvrKNEOjqieCbgk6JdMTX34C&enc=deflate
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    function run() {
+
+    const anos = [
+        "2016", "2017", "2018", "2019",
+        "2020", "2021", "2022", "2023",
+        "2024", "2025"
+    ];
+
+    const totalChuva = [
+        295, 211.5, 764.8, 497.9,
+        591.3, 388.5, 938.6, 465.6,
+        378.2, 528.5
+    ];
+
+    // Dataset do ECharts
+    const source = [
+        ['Ano', 'Volume de Chuva (mm)']
+    ];
+
+    for (let i = 0; i < anos.length; i++) {
+        source.push([
+            anos[i],
+            totalChuva[i]
+        ]);
+    }
+
+    const option = {
+
+        title: {
+            text: 'Volume de chuva acumulada por ano (2016–2025)\nFazenda Carnaúba – Taperoá – PB',
+            left: 'center',
+            top: 40,
+            textStyle: {
+                fontSize: 18,
+                fontWeight: 'bold'
+            }
+        },
+
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            },
+            formatter: function (params) {
+                const p = params[0];
+                return `
+                    <strong>Ano:</strong> ${p.axisValue}<br/>
+                    <strong>Volume acumulado:</strong> ${p.value[1]} mm
+                `;
+            }
+        },
+
+        toolbox: {
+            right: 20,
+            feature: {
+                dataZoom: {
+                    yAxisIndex: 'none'
+                },
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+
+        dataset: {
+            source: source
+        },
+
+        grid: {
+            left: '10%',
+            right: '6%',
+            top: '22%',
+            bottom: '18%'
+        },
+
+        xAxis: {
+            type: 'category',
+            name: 'Ano',
+            nameLocation: 'middle',
+            nameGap: 30
+        },
+
+        yAxis: {
+            type: 'value',
+            name: 'Precipitação acumulada (mm)',
+            nameLocation: 'middle',
+            nameGap: 60,
+            min: 0
+        },
+
+        dataZoom: [
+            {
+                type: 'slider',
+                start: 0,
+                end: 100
+            },
+            {
+                type: 'inside'
+            }
+        ],
+
+        animation: true,
+        animationDuration: 2500,
+        animationDurationUpdate: 1000,
+        animationEasing: 'cubicOut',
+        animationDelay: function (idx) {
+            return idx * 150;
+        },
+
+        series: [
+            {
+                name: 'Volume de chuva',
+                type: 'bar',
+                barWidth: '55%',
+                itemStyle: {
+                    borderRadius: [6, 6, 0, 0]
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                label: {
+                    show: false
+                }
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+}
+
+run();
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
