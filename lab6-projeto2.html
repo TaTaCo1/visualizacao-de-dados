@@ -1,0 +1,296 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=candlestick-sh-2015&code=zVhdbuM2EH7fU7DeFnYQr2I58W9-gMRZAwH6E2wXfahrYGmJttlKpCtSXruLAL1DT7DoQ0_Ql77mJj1Jh5Rk_VFONnnochehpRnODOebIWc0D5kjKWcoCFnjAH148QLBcDgTEmHGBTpHE_1KjVq7ZXdqTT1347kXz_1aM8c3iN63W_Fsx3M7z9c-jt-fxHOnpsnT06wlkkvsjZbhGufsOe53rV4TtQcd-GPbFky97onVTzWcDHrWoIk6A9s6bgJ_X_EMjvtWN8PT7cAjOu71rTawtoHHaIKL896Y1C4ZV1b_gAOK7_-6_5Ojhu8f1KaG5SsuqKTr54hgZIGfLGLOA9TwiEQUVtunMJ1lvGp5hC3kEl4fHu6CINW8VqIdzGHpYSNdNaFT9CojZULh0Z4eWJKP6Ya4Dfsg1p6K8ihb5kFUQ0UaSEsxUSPRunuZ7EUNDYe1CsWyoUVmNdE5auxMvjhHLbWlrOQdGHkBCfkOEU-Qwpqd9yvW6F93Wbz4SifWedafkkqPDAuiJdnIIapnAHQxcnS0Yyf0Qw_D8woABDehhsq9f3__Q6XKwU9sjH8jDMgjHDB8_88MI6Cht3hFAn7_UT_cXtXzjvXIXOlzCJMkqKdbaKZ2emQBYkuG8tUQdVt5aYJ4xJGkxKwT_K2CqTZEMghJfpkm3yZAAMscg9MNPN8mjk94ciyR34vmS849ScHYgv0BXSxIAHvHGyoKXlGvbjlVPjFtRW5XAFxdLLHL36dOizVnHyHVfCxBTGOFA-yLXELls2EF0RExTVrZ6E5GQGQYMPSuRFDjbHbx5YeVtcZeSGD53dnR7OJsFhxdGLnT6BrmV9rTO-T7anFp3bs0vvf7esY3RZ_NCQbbS7Guhosl_pFz30RTY3sJUNwwl4DQOuOM5N1tcHnkKyG5VmggCrwml-LGxwvN8IhtrakIsfcNLgWRWPL3xmj1KRuiV51WIT98DNvoFt-61CdMwPkwRHaeQtkbzLSZhqDxOARn_uxMRv3lVc8e2aNCWKfk1-POcadVSR6PR9fX7WpyR_2rJF9dXb8eFw-alNw9ueqMu5Xk1vVJ79IuwxzdYfuBWgS0dPbEJ5zd-qqgEg6ApaL0iwR9tNXb7eL7GZdSRWrdhiVG_RsVraWTJjotHCzJggfbglCGfUWFi9ssUidAhUidtGZ5hQrALDtNvnwYVZ94HnWz14Qh_SrXUghxt5C-KYpw3-fMEgSgecgqBXZd3_6GaBI8DBxQrOmfZrGWuysM9sje8TxB_q6I2CN_x_MIrwkSUAKRMslfHWXtcYTo69igO4ZrhgMDMYbmZp_jCXO4azyzdIrEwW5O_-2-0DWFcHqyBr98TVmlWkGhrIWQMhcfmmPrz7iX3DJmHrX9qjNXOztJ11YGpOpDLA-maWuV6O2qpecguC_E_xcUqST-93JbLosLt179pd3pdkYtg9SnuXNXWD7Hnfsy-jN356jb7rf7D7ozVREF8l1UFOo_R0fomgiiWjoOF_H9xzl1on7N346WOJAW-Ok73Qc1onYo6dNg5Rvi8zVBZA1JCh8aMJN0AXPDwYLHnyME-Vl1QtiHohsxvgbgoD4_yGng83mjHvUrUSsC_FA_ufWMKuiSEI6bGozUNw8wBQfgC5-jOfVkwBHZOF4o6DpvPxhuFN7UUnSDZyrzo_JeL1GaQGlS6Fsq-jKlPlh346-IS9CvIYm_MsB_vgLg_yZCu8BHLhFw2jkgKL0WVJv7RSw0acImGZXTUuNRBqUcIubO7zHN3iObvk9p_h7ZBJoj1xDL2a8EaX-V7eJNCMJ-dRdv3KTB8od2tmc3kFyZy92AKRii3JphewjUakBTMJNfVeV24jf9A5yks_P0Pw&enc=deflate
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    function run() {
+
+    const anos = [
+        "2015", "2016", "2017", "2018",
+        "2019", "2020", "2021", "2022",
+        "2023", "2024", "2025"
+    ];
+
+    const totalChuva = [
+        386.7, 295, 211.5, 764.8,
+        497.9, 591.3, 388.5, 938.6,
+        465.6, 378.2, 528.5
+    ];
+
+    const todas = [
+        ["Ano", "Variação (mm)"]
+    ];
+
+    const positivas = [
+        ["Ano", "Variação (mm)"]
+    ];
+
+    const negativas = [
+        ["Ano", "Variação (mm)"]
+    ];
+
+    for (let i = 1; i < totalChuva.length; i++) {
+
+        const variacao = +(totalChuva[i] - totalChuva[i - 1]).toFixed(1);
+
+        const linha = [
+            anos[i],
+            variacao
+        ];
+
+        todas.push(linha);
+
+        if (variacao >= 0) {
+            positivas.push(linha);
+        } else {
+            negativas.push(linha);
+        }
+    }
+
+    const option = {
+
+        title: {
+            text: 'Variação da chuva acumulada por ano (2016–2025)\nFazenda Carnaúba – Taperoá – PB',
+            left: 'center'
+        },
+
+        legend: {
+            top: 60,
+            selected: {
+                "Todas": true,
+                "Positivas": false,
+                "Negativas": false
+            }
+        },
+
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            },
+            formatter(params) {
+
+                const p = params[0];
+
+                return `
+                    <b>${p.value[0]}</b><br/>
+                    Variação: <b>${p.value[1]} mm</b>
+                `;
+            }
+        },
+
+        toolbox: {
+            feature: {
+                dataZoom: {
+                    yAxisIndex: 'none'
+                },
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+
+        visualMap: {
+            show: false,
+            min: -500,
+            max: 600,
+            dimension: 1,
+            inRange: {
+                color: [
+                    '#B71C1C',
+                    '#EF5350',
+                    '#FFCDD2',
+                    '#F5F5F5',
+                    '#BBDEFB',
+                    '#64B5F6',
+                    '#0D47A1'
+                ]
+            }
+        },
+
+        grid: {
+            left: '10%',
+            right: '8%',
+            top: '22%',
+            bottom: '18%'
+        },
+
+        xAxis: {
+            type: 'category',
+            name: 'Ano'
+        },
+
+        yAxis: {
+            type: 'value',
+            name: 'Variação (mm)'
+        },
+
+        dataZoom: [
+            {
+                type: 'slider'
+            },
+            {
+                type: 'inside'
+            }
+        ],
+
+        dataset: [
+            {
+                id: 'todas',
+                source: todas
+            },
+            {
+                id: 'positivas',
+                source: positivas
+            },
+            {
+                id: 'negativas',
+                source: negativas
+            }
+        ],
+
+        series: [
+
+            {
+                name: 'Todas',
+                type: 'bar',
+                datasetId: 'todas',
+                encode: {
+                    x: 'Ano',
+                    y: 'Variação (mm)'
+                },
+
+                markLine: {
+                    silent: true,
+                    symbol: 'none',
+                    data: [
+                        { yAxis: 0 }
+                    ]
+                }
+            },
+
+            {
+                name: 'Positivas',
+                type: 'bar',
+                datasetId: 'positivas',
+                encode: {
+                    x: 'Ano',
+                    y: 'Variação (mm)'
+                },
+
+                itemStyle: {
+                    color: '#1565C0'
+                }
+            },
+
+            {
+                name: 'Negativas',
+                type: 'bar',
+                datasetId: 'negativas',
+                encode: {
+                    x: 'Ano',
+                    y: 'Variação (mm)'
+                },
+
+                itemStyle: {
+                    color: '#C62828'
+                }
+            }
+
+        ]
+    };
+    
+    // Desenha o gráfico
+    myChart.setOption(option);
+
+    // Remove eventos antigos (caso run() seja chamado novamente)
+    myChart.off('legendselectchanged');
+
+    // Faz a legenda funcionar como filtro exclusivo
+    myChart.on('legendselectchanged', function (params) {
+
+        const selecionada = params.name;
+
+        // Impede que todas as opções sejam desmarcadas
+        if (!params.selected[selecionada]) {
+
+            myChart.setOption({
+                legend: {
+                    selected: {
+                        "Todas": true,
+                        "Positivas": false,
+                        "Negativas": false
+                    }
+                }
+            });
+
+            return;
+        }
+
+        const selected = {
+            "Todas": false,
+            "Positivas": false,
+            "Negativas": false
+        };
+
+        selected[selecionada] = true;
+
+        myChart.setOption({
+            legend: {
+                selected: selected
+            }
+        });
+
+    });
+
+}
+
+run();
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
